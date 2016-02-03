@@ -20,6 +20,9 @@ app.set('views', __dirname + '/views');
 var indexRoute = require('./controllers/index');
 indexRoute.registerRoutes(app);
 
+var errorRoute = require('./controllers/error');
+errorRoute.registerRoutes(app);
+
 // start the server
 var server = app.listen(app.get('port'), function() {
   var host = server.address().address;
